@@ -964,6 +964,11 @@
 // ✅ FULL STATIC FRONTEND VERSION
 // Backend completely removed
 
+export interface DynamicRoutes {
+  mainTitle: string;
+  slug: string;
+}
+
 export const companyTabAPI = {
   async getPageData(role: string) {
     return {
