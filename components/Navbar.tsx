@@ -120,25 +120,27 @@ const resourceItems = [
   { name: "About HYI", link: "/about" },
   { name: "Career", link: "/career" },
   { name: "Help", link: "/help" },
-  { name: "Blogs", link: "/blogs" },
+  // { name: "Blogs", link: "/blogs" },
   { name: "Media", link: "/media" },
   { name: "Investor", link: "/investor" },
 ];
 
 
   return (
-   <nav
-      className={`
-        ${
-          scrolled
-            ? "fixed top-0 left-0 bg-black shadow-xl backdrop-blur-md"
-            : "absolute top-0 left-0 bg-transparent"
-        }
-        w-full z-[999] text-white px-6 xl:px-20 pt-3 pb-2
-        flex justify-between items-center
-        transition-all duration-500
-      `}
-    >
+<nav
+  className={`
+    ${
+      mobileMenu
+        ? "fixed top-0 left-0 bg-black"
+        : scrolled
+        ? "fixed top-0 left-0 bg-black shadow-xl backdrop-blur-md"
+        : "absolute top-0 left-0 bg-transparent"
+    }
+    w-full z-[999] text-white px-6 xl:px-20 pt-3 pb-2
+    flex justify-between items-center
+    transition-all duration-500
+  `}
+>
       {/* LOGO */}
       <Link href="/">
         <img src="/logo.svg" className="w-[80px]" />
@@ -643,80 +645,286 @@ const resourceItems = [
       </div>
 
       {/* ================= MOBILE ================= */}
-      <button
-        onClick={() => setMobileMenu(!mobileMenu)}
-        className="xl:hidden text-3xl"
-      >
-        ☰
-      </button>
+   {/* ================= MOBILE ================= */}
+<button
+  onClick={() => setMobileMenu(!mobileMenu)}
+  className="xl:hidden text-3xl"
+>
+  ☰
+</button>
 
-      <div
-        className={`fixed top-0 right-0 h-full w-[320px] bg-black p-6 transform ${mobileMenu ? "translate-x-0" : "translate-x-full"} transition`}
-      >
-        <button onClick={() => setMobileMenu(false)} className="text-xl">✕</button>
+<div
+  className={`fixed top-0 right-0 h-full w-[320px] bg-black p-6 z-[9999] overflow-y-auto transform ${
+    mobileMenu ? "translate-x-0" : "translate-x-full"
+  } transition duration-300`}
+>
+  <button
+    onClick={() => setMobileMenu(false)}
+    className="text-2xl mb-6"
+  >
+    ✕
+  </button>
 
-        {/* MOBILE DROPDOWNS */}
+  {/* HOME */}
+  <Link
+    href="/"
+    onClick={() => setMobileMenu(false)}
+    className="block py-3 border-b border-white/10"
+  >
+    Home
+  </Link>
 
-        {[
-          {
-            name: "Integrate AI",
-            key: "ai",
-            items: [
-              "KPI & KRA",
-              "Price Tracking",
-              "Project Tracking",
-              "Talent Matching",
-              "Strategy",
-            ],
-          },
-          {
-            name: "AI Cloud",
-            key: "cloud",
-            items: [
-              "AI Model Hosting Platform",
-              "AI Agent Cloud Platform",
-              "AI Automation Platform",
-              "AI API Marketplace",
-              "AI Training Cloud",
-            ],
-          },
-          {
-            name: "Robotics",
-            key: "robot",
-            items: [
-              "Warehouse Automation Robot",
-              "Security Patrol Robot",
-              "Industrial Robot Arms",
-              "Delivery Robot",
-            ],
-          },
-        ].map((menu) => (
-          <div key={menu.key} className="mt-6">
-            <button
-              onClick={() =>
-                setMobileDropdown(mobileDropdown === menu.key ? null : menu.key)
-              }
-              className="flex justify-between w-full"
-            >
-              {menu.name} ▾
-            </button>
+  {/* SOLUTIONS */}
+  <div className="mt-2">
+    <button
+      onClick={() =>
+        setMobileDropdown(
+          mobileDropdown === "solutions" ? null : "solutions"
+        )
+      }
+      className="flex justify-between w-full py-3 border-b border-white/10"
+    >
+      Our Solutions ▾
+    </button>
 
-            <div
-              className={`transition-all overflow-hidden ${mobileDropdown === menu.key ? "max-h-[300px] mt-3" : "max-h-0"}`}
-            >
-              {menu.items.map((item) => (
-                <p key={item} className="text-gray-400 text-sm mt-2">
-                  {item}
-                </p>
-              ))}
-            </div>
-          </div>
-        ))}
-
-        <Link href="/solutions" className="block mt-6">
-          Solutions
+    <div
+      className={`overflow-hidden transition-all ${
+        mobileDropdown === "solutions"
+          ? "max-h-[500px] mt-2"
+          : "max-h-0"
+      }`}
+    >
+      {solutionItems.map((item) => (
+        <Link
+          key={item.name}
+          href={item.link}
+          onClick={() => setMobileMenu(false)}
+          className="block text-sm text-gray-400 py-2 pl-3"
+        >
+          {item.name}
         </Link>
-      </div>
+      ))}
+    </div>
+  </div>
+
+  {/* INTEGRATE AI */}
+  <div className="mt-2">
+    <button
+      onClick={() =>
+        setMobileDropdown(mobileDropdown === "ai" ? null : "ai")
+      }
+      className="flex justify-between w-full py-3 border-b border-white/10"
+    >
+      Integrate AI ▾
+    </button>
+
+    <div
+      className={`overflow-hidden transition-all ${
+        mobileDropdown === "ai" ? "max-h-[500px] mt-2" : "max-h-0"
+      }`}
+    >
+      {items.map((item) => (
+        <Link
+          key={item.name}
+          href={item.link}
+          onClick={() => setMobileMenu(false)}
+          className="block text-sm text-gray-400 py-2 pl-3"
+        >
+          {item.name}
+        </Link>
+      ))}
+    </div>
+  </div>
+
+  {/* AI CLOUD */}
+  <div className="mt-2">
+    <button
+      onClick={() =>
+        setMobileDropdown(
+          mobileDropdown === "cloud" ? null : "cloud"
+        )
+      }
+      className="flex justify-between w-full py-3 border-b border-white/10"
+    >
+      AI Cloud ▾
+    </button>
+
+    <div
+      className={`overflow-hidden transition-all ${
+        mobileDropdown === "cloud"
+          ? "max-h-[600px] mt-2"
+          : "max-h-0"
+      }`}
+    >
+      {aiCloudeItems.map((item) => (
+        <Link
+          key={item.name}
+          href={item.link}
+          onClick={() => setMobileMenu(false)}
+          className="block text-sm text-gray-400 py-2 pl-3"
+        >
+          {item.name}
+        </Link>
+      ))}
+    </div>
+  </div>
+
+  {/* ROBOTICS */}
+  <div className="mt-2">
+    <button
+      onClick={() =>
+        setMobileDropdown(
+          mobileDropdown === "robot" ? null : "robot"
+        )
+      }
+      className="flex justify-between w-full py-3 border-b border-white/10"
+    >
+      Robotics ▾
+    </button>
+
+    <div
+      className={`overflow-hidden transition-all ${
+        mobileDropdown === "robot"
+          ? "max-h-[600px] mt-2"
+          : "max-h-0"
+      }`}
+    >
+      {[
+        {
+          name: "Warehouse Automation Robot",
+          link: "/robotics/Warehouse-Automation-Robot",
+        },
+        {
+          name: "Security Patrol Robot",
+          link: "/robotics/Security-Patrol-Robot",
+        },
+        {
+          name: "Industrial Robot Arms",
+          link: "/robotics/Industrial-Robot-Arms",
+        },
+        {
+          name: "Cleaning Robots",
+          link: "/robotics/Cleaning-Robots",
+        },
+        {
+          name: "Hospital Delivery Robot",
+          link: "/robotics/Hospital-Delivery-Robot",
+        },
+        {
+          name: "Hotel Delivery Robot",
+          link: "/robotics/Hotel-Delivery-Robot",
+        },
+        {
+          name: "Restaurant Waiter Robot",
+          link: "/robotics/Restaurant-Waiter-Robot",
+        },
+      ].map((item) => (
+        <Link
+          key={item.name}
+          href={item.link}
+          onClick={() => setMobileMenu(false)}
+          className="block text-sm text-gray-400 py-2 pl-3"
+        >
+          {item.name}
+        </Link>
+      ))}
+    </div>
+  </div>
+
+  {/* AUTOPILOT */}
+  <div className="mt-2">
+    <button
+      onClick={() =>
+        setMobileDropdown(
+          mobileDropdown === "rnd" ? null : "rnd"
+        )
+      }
+      className="flex justify-between w-full py-3 border-b border-white/10"
+    >
+      Research & Development ▾
+    </button>
+
+    <div
+      className={`overflow-hidden transition-all ${
+        mobileDropdown === "rnd"
+          ? "max-h-[500px] mt-2"
+          : "max-h-0"
+      }`}
+    >
+      {[
+        {
+          name: "Flight Autopilot",
+          link: "/autopilot/Flight-Autopilot",
+        },
+        {
+          name: "Car Autopilot",
+          link: "/autopilot/Car-Autopilot",
+        },
+        {
+          name: "Bus Autopilot",
+          link: "/autopilot/Bus-Autopilot",
+        },
+        {
+          name: "Drone Autopilot",
+          link: "/autopilot/Drone-Autopilot",
+        },
+      ].map((item) => (
+        <Link
+          key={item.name}
+          href={item.link}
+          onClick={() => setMobileMenu(false)}
+          className="block text-sm text-gray-400 py-2 pl-3"
+        >
+          {item.name}
+        </Link>
+      ))}
+    </div>
+  </div>
+
+  {/* GCC */}
+  <Link
+    href="/gcc"
+    onClick={() => setMobileMenu(false)}
+    className="block py-3 border-b border-white/10"
+  >
+    HYI GCC
+  </Link>
+
+  {/* RESOURCES */}
+  <div className="mt-2">
+    <button
+      onClick={() =>
+        setMobileDropdown(
+          mobileDropdown === "resources"
+            ? null
+            : "resources"
+        )
+      }
+      className="flex justify-between w-full py-3 border-b border-white/10"
+    >
+      Resources ▾
+    </button>
+
+    <div
+      className={`overflow-hidden transition-all ${
+        mobileDropdown === "resources"
+          ? "max-h-[500px] mt-2"
+          : "max-h-0"
+      }`}
+    >
+      {resourceItems.map((item) => (
+        <Link
+          key={item.name}
+          href={item.link}
+          onClick={() => setMobileMenu(false)}
+          className="block text-sm text-gray-400 py-2 pl-3"
+        >
+          {item.name}
+        </Link>
+      ))}
+    </div>
+  </div>
+</div>
     </nav>
   );
 }

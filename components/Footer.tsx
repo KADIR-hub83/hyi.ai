@@ -68,7 +68,7 @@ export default function Footer() {
        { name: "About HYI", href: "/about" },
         { name: "Career", href: "/career" },
         { name: "Help", href: "/help" },
-        { name: "Blogs", href: "/blogs" },
+        // { name: "Blogs", href: "/blogs" },
         { name: "Media", href: "/media" },
         { name: "Investor", href: "/investor" },
       ],
