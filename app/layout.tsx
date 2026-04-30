@@ -37,7 +37,23 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        
+      
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "HYI AI",
+              url: "https://www.hyi.co.in",
+            }),
+          }}
+        />
+
+        {children}
+      </body>
     </html>
   );
 }
