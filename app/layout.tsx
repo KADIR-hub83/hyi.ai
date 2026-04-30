@@ -51,6 +51,21 @@ export default function RootLayout({
             }),
           }}
         />
+        <script
+  id="org-schema"
+  type="application/ld+json"
+
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "HYI AI",
+      url: "https://www.hyi.co.in",
+      logo: "https://www.hyi.co.in/favicon.ico",
+    }),
+  }}
+/>
+        
 
         {children}
       </body>
