@@ -4,19 +4,19 @@ import Image from "next/image";
 import HeroMapImage from "@/public/Hero-map.png";
 import HeroMapGif from "@/assets/landingPage/images/Hero-gif-03.gif";
 import { ShimmerButton } from "@/components/shared/customShimmerButton";
-// import CustomRotatingHeadings from "@/components/shared/customRotatingHeadings";
-// import CustomTypingHeadings from "@/components/shared/customTypingHeading";
-// import TypingAnimation from "./typingAnimation";
+import CustomRotatingHeadings from "@/components/shared/customRotatingHeadings";
+import CustomTypingHeadings from "@/components/shared/customTypingHeading";
+import TypingAnimation from "./typingAnimation";
 // import HiringModal from "@/components/forCompaniesPage/HiringForms";
 import { useState } from "react";
 
 export default function HeroSection() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
-    <div className="flex items-center py-12 px-4 lg:py-0 lg:px-0">
-      <div className="flex flex-col items-center text-center z-10 gap-7 lg:items-start lg:text-left lg:-mr-40 xl:-mr-50">
+   <div className="w-full max-w-[1380px] mx-auto flex flex-col lg:flex-row items-center  py-12 px-4 lg:px-10 ">
+      <div className="flex flex-col items-center text-center z-10 gap-7 lg:items-start lg:text-left lg:w-1/2">
         <div className="w-full min-h-[124px] min-w-[330px] transition-all duration-500 ease-in-out overflow-hidden min-[410px]:min-w-[400px] min-[768px]:min-h-[140px] md:min-w-[450px] md:max-w-[450px] flex flex-col gap-3">
-          {/* <TypingAnimation /> */}
+          <TypingAnimation />
         </div>
         {/* <CustomRotatingHeadings>
           <div className="w-full flex flex-col gap-3">
@@ -76,16 +76,16 @@ export default function HeroSection() {
             </p>
           </div>
         </CustomRotatingHeadings> */}
-        <ShimmerButton className="px-7" onClick={() => setIsModalOpen(true)}>
+        {/* <ShimmerButton className="px-7" onClick={() => setIsModalOpen(true)}>
           Hire Talent
-        </ShimmerButton>
+        </ShimmerButton> */}
       </div>
-      <div className="hidden z-5 lg:flex lg:relative lg:isolate lg:7/12">
-        <Image src={HeroMapImage} alt="World map" fetchPriority="high" />
+      <div className="hidden z-5 lg:flex lg:relative lg:isolate  pt-[110px] ">
+        <Image src={HeroMapImage} alt="World map" fetchPriority="high" className="w-screen" />
         <Image
           src={HeroMapGif}
           alt="People Network world wide"
-          className="absolute inset-0"
+          className="absolute inset-0 top-[80px]"
           fetchPriority="high"
         />
       </div>

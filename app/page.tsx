@@ -22,10 +22,23 @@ import Robotics from "@/components/section/landingPage/robotics";
 //   NavbarLogo,
 //   NavbarButton,
 // } from "@/app/components/ui/resizable-navbar";
+import dynamic from "next/dynamic";
+import HeroSection from "@/components/section/landingPage/heroSection";
+import HeroUserSlider from "@/components/section/general/heroUserSlider";
+
+const MVPAnimationsComponent = dynamic(
+  () => import("@/components/section/landingPage/mvpAnimations"),
+  { ssr: false }
+);
+const Features = dynamic(
+  () => import("@/components/section/landingPage/features"),
+  { ssr: false }
+);
 
 export default function Home() {
   return (
-    <div className="bg-black text-white ">
+    <div className="bg-black text-white">
+  
 
       {/* <Navbar /> */}
             {/* ✅ NAVBAR ADD */}
@@ -48,7 +61,25 @@ export default function Home() {
     
         <Navbar />
   
-      <AetherFlowHero />
+    
+           <div className="w-full flex items-center justify-center bg-[url('/Hero-map.png')] bg-no-repeat bg-cover lg:hidden">
+          <HeroSection />
+        </div>
+        <div className="w-full max-w-[1580px] flex flex-col bg-background relative isolate  mx-auto">
+          <div className="flex flex-col ">
+            <div className="hidden lg:flex">
+              <HeroSection />
+            </div>
+            </div>
+            </div>
+           <div className="relative">
+              <HeroUserSlider />
+              <div className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 flex items-center justify-center -z-1">
+                <div className="w-[600px] h-[600px] md:w-[950px] md:h-[450px] rounded-full bg-[radial-gradient(ellipse_at_center,_rgba(184,0,227,0.4)_0%,_transparent_70%)] blur-3xl" />
+              </div>
+            </div> 
+              {/* <AetherFlowHero /> */}
+         
         
 
            <div className="w-full flex flex-col items-center gap-8 xl:px-20 px-5 py-12">
@@ -57,6 +88,10 @@ export default function Home() {
                 <p className="hyi-p">{connectWithDeveloperData.paragraph}</p>
               </div>
               <ConnectWithDevelopers />
+                  <div className="relative z-10 flex flex-col gap-12 md:gap-16">
+          <MVPAnimationsComponent />
+          <Features />
+        </div>
             </div>
              <SecondSection />
         

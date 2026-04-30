@@ -9,6 +9,7 @@ import ClickUp from "@/assets/common/FloatableIcons/clickUp.png";
 import Feedback from "@/assets/common/FloatableIcons/feedback.png";
 import Google from "@/assets/common/FloatableIcons/google.png";
 import JobCategoryCard from "./job-category-card";
+import Footer from "@/components/Footer";
 
 export default function TalentSolutions() {
   const browseBy = "by Job Category";
@@ -93,7 +94,7 @@ export default function TalentSolutions() {
   ];
 
   return (
-    <div className="bg-black text-white min-h-screen">
+    <div className="bg-black text-white min-h-screen ">
       <Navbar />
 
       {/* HERO */}
@@ -103,8 +104,8 @@ export default function TalentSolutions() {
   Talent Solutions
 </p>
 
-        <h1 className="text-5xl md:text-5xl  leading-tight font-bold tracking-tighter mb-2 bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-400">
-          Hire & Grow <span className="text-purple-500">Succeed.</span>
+        <h1 className=" mb-2 hyi-h2 text-3xl">
+          Hire & Grow Succeed.
         </h1>
 
         <p className="text-gray-400 text-lg max-w-3xl mx-auto mt-6">
@@ -124,11 +125,11 @@ export default function TalentSolutions() {
           className="border border-gray-800 rounded-3xl p-10 bg-cover bg-center bg-no-repeat overflow-hidden"
           style={{ backgroundImage: "url('/bg-talent.svg')", left:2, position:"relative" }}
         >
-          <h2 className="text-4xl  text-center font-bold tracking-tighter mb-2 bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-400">
-            How to get hired at HYI.AI
+          <h2 className="mb-2 hyi-h2 text-center ">
+            How To Get Hired At HYI.AI
           </h2>
 
-          <p className="text-gray-400 text-center mt-4">
+          <p className="text-center mt-4 hyi-p">
             Learn strategies to land your next role with confidence.
           </p>
 
@@ -147,8 +148,8 @@ export default function TalentSolutions() {
                   </div>
 
                   <div>
-                    <h3 className="text-xl font-semibold">{item.title}</h3>
-                    <p className="text-gray-400">{item.desc}</p>
+                    <h3 className="hyi-h2 text-base">{item.title}</h3>
+                    <p className="hyi-p">{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -160,9 +161,9 @@ export default function TalentSolutions() {
       {/* JOB CATEGORY */}
       <section className="w-full mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-10">
         <div className="text-center">
-          <h2 className="text-4xl font-bold">Browse {browseBy}</h2>
+          <h2 className="hyi-h2">Browse {browseBy}</h2>
 
-          <p className="mt-3 text-white/70 max-w-3xl mx-auto">
+          <p className="mt-3 hyi-p max-w-3xl mx-auto">
             Explore opportunities across development, design, management, and
             analytics roles.
           </p>
@@ -187,19 +188,19 @@ export default function TalentSolutions() {
       {/* WORK MODEL */}
       <section className="max-w-7xl mx-auto px-6 pt-10">
         <div className="border border-gray-800 rounded-3xl p-10">
-          <h2 className="text-4xl font-bold">
+          <h2 className="hyi-h2">
             Join a network of elite professionals
           </h2>
 
-          <p className="text-gray-400 mt-4 max-w-4xl">
+          <p className="hyi-p mt-4 max-w-4xl">
             Work on high-impact global projects with flexible hourly contracts
             or secure full-time opportunities.
           </p>
 
           <div className="grid md:grid-cols-2 gap-14 mt-14">
             <div>
-              <h3 className="text-2xl font-semibold mb-6">Work by the Hour</h3>
-              <ul className="space-y-4 text-gray-400">
+              <h3 className="hyi-h2 mb-6">Work by the Hour</h3>
+              <ul className="space-y-4 hyi-p">
                 <li>• Flexible part-time projects</li>
                 <li>• Get paid hourly or project-based</li>
                 <li>• Hassle-free contracts</li>
@@ -207,10 +208,10 @@ export default function TalentSolutions() {
             </div>
 
             <div>
-              <h3 className="text-2xl font-semibold mb-6">
+              <h3 className="hyi-h2 mb-6">
                 Join Us Full-Time
               </h3>
-              <ul className="space-y-4 text-gray-400">
+              <ul className="space-y-4 hyi-p">
                 <li>• Secure full-time jobs with top companies</li>
                 <li>• Direct access to hiring managers</li>
                 <li>• Competitive salaries</li>
@@ -221,8 +222,8 @@ export default function TalentSolutions() {
       </section>
 
       {/* SUPPORT */}
-      <section className="max-w-7xl mx-auto px-6 pt-10">
-        <h2 className="text-4xl font-bold text-center">
+      <section className="max-w-7xl mx-auto px-6 pt-10 pb-10">
+        <h2 className="hyi-h2 text-center">
           Get Help With HYI.AI
         </h2>
 
@@ -232,27 +233,14 @@ export default function TalentSolutions() {
               key={i}
               className="rounded-3xl border border-purple-900/30 bg-[#0c0c0c] p-8"
             >
-              <h3 className="text-2xl font-semibold">{item.title}</h3>
-              <p className="text-gray-400 mt-4">{item.desc}</p>
+              <h3 className="hyi-h2">{item.title}</h3>
+              <p className="hyi-p mt-4">{item.desc}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="max-w-7xl mx-auto px-6 py-24 text-center">
-        <h2 className="text-5xl font-bold">
-          Ready to accelerate your career?
-        </h2>
-
-        <p className="text-gray-400 mt-5 text-lg">
-          Join HYI.AI today and access premium remote opportunities.
-        </p>
-
-        <button className="mt-8 px-10 py-4 rounded-full bg-purple-600 hover:bg-purple-700 transition">
-          Get Started
-        </button>
-      </section>
+     <Footer/>
     </div>
   );
 }

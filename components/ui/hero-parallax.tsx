@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { motion, useScroll, useTransform, useSpring } from "motion/react";
 import CustomButton from "../shared/customButton";
+import { ShimmerButton } from "../shared/customShimmerButton";
 
 type Product = {
   id?: string | number;
@@ -136,9 +137,10 @@ export const HeroParallax = ({ products }: HeroParallaxProps) => {
 export const Header = () => {
   return (
     <div className="relative z-10 max-w-6xl mx-auto text-center px-6">
-      <span className="px-5 py-2 rounded-full border border-white/15 bg-white/5 text-white/80 text-sm">
-        Our Solutions
-      </span>
+       <ShimmerButton className="px-16" align="center" >
+ AI Cloud
+        </ShimmerButton> 
+   
 
       <h1 className="mt-6 hyi-h2">
         Powerful Digital Solutions For Modern Business

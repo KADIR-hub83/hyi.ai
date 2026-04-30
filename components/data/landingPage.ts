@@ -52,7 +52,10 @@ import javaScript from "@/assets/landingPage/softwares/javaScript.svg";
 import linux from "@/assets/landingPage/softwares/linux.svg";
 
 export const connectWithDeveloperData = {
-  heading: "Connect With Top Remote Developers Instantly",
+  // heading: "Connect With Top Remote Developers Instantly",
+  // paragraph:
+  //   "HYI.AI connects you with pre-vetted remote developers skilled across top languages, frameworks, and technologies. Browse our most in-demand specializations below.",
+  heading: "Connect with Top Virtual Assistants Instantly",
   paragraph:
     "HYI.AI connects you with pre-vetted remote developers skilled across top languages, frameworks, and technologies. Browse our most in-demand specializations below.",
 

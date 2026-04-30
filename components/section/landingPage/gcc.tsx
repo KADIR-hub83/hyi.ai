@@ -2,11 +2,12 @@ import { GCCData } from "@/components/data/landingPage";
 import GCCImage from "@/assets/landingPage/images/GCC-Collaboration.png";
 import Image from "next/image";
     import Link from "next/link";
-    import { ChevronRight} from "lucide-react";
+    import { ArrowRight, ChevronRight} from "lucide-react";
 import React from "react";
 // import CustomButton from "@/components/shared/customButton";
 // import GCCHeroImage from "@/public/GCC-Bg.webp";
 import CustomAutoSlider from "@/components/shared/customAutoSlider";
+import { ShimmerButton } from "@/components/shared/customShimmerButton";
 
 export default function GCC() {
   return (
@@ -36,18 +37,22 @@ export default function GCC() {
 <div className="hidden w-full md:flex flex-col items-center text-center cursor-default gap-4 z-10 md:pt-20 md:gap-8">
   {/* Top Row */}
   <div className="flex items-center gap-3 flex-wrap justify-center">
-    <span className="w-fit text-base label-gradient text-white/70 px-3.5 py-1.5">
+   
+<Link href="/gcc">
+  <ShimmerButton
+    align="center"
+    className="px-5 py-2 text-base font-semibold cursor-pointer"
+  >
+    <span className="flex items-center gap-2">
       {GCCData.label}
+
+      <ArrowRight
+        size={18}
+        className="transition-transform duration-300 group-hover:translate-x-1"
+      />
     </span>
-
-    <Link
-      href="/gcc"
-      className="px-4 py-1.5 rounded-full flex border border-white/20 bg-white/10 text-white text-sm hover:bg-white hover:text-black transition"
-    >
-      Visit GCC 
-
-  <ChevronRight className="w-5 h-5 animate-spin-around" />
-    </Link>
+  </ShimmerButton>
+</Link>
   </div>
 
   {/* Content */}

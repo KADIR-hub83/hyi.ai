@@ -52,10 +52,10 @@ export default function JobCategoryCard({
           />
         </div>
         <div className="min-w-0">
-          <h3 className="text-white font-semibold text-lg text-start">
+          <h3 className="hyi-h2 text-start">
             {title}
           </h3>
-          <p className="text-white/70 text-sm mt-1">{blurb}</p>
+          <p className="hyi-p text-sm mt-1">{blurb}</p>
         </div>
       </div>
 

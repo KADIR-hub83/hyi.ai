@@ -14,6 +14,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import CustomButton from "@/components/shared/customButton";
+import { ShimmerButton } from "@/components/shared/customShimmerButton";
 
 export default function Robotics() {
  const roboticsCards = [
@@ -78,9 +79,9 @@ export default function Robotics() {
       <div className="relative z-10 max-w-[1500px] mx-auto">
         {/* Badge */}
         <div className="flex justify-center mb-6">
-          <span className="px-5 py-2 rounded-full border border-white/20 bg-white/10 text-sm">
-            Robotics Solutions
-          </span>
+           <ShimmerButton className="px-16" align="center">
+              Robotics Solution
+           </ShimmerButton>
         </div>
 
         {/* Heading */}

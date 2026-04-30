@@ -31,12 +31,12 @@ const containerVariants = {
 };
 
 const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 100, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.5,
+      duration: 1,
     },
   },
 };
@@ -106,7 +106,7 @@ export const FinancialHero = ({
         {/* Left: Text Content */}
         <div className="flex flex-col items-center text-center">
           <motion.h1
-            className="hyi-h2 text-5xl tracking-tighter mb-2 bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-400"
+            className="hyi-h2 text-5xl tracking-wide mb-2 bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-400"
             variants={itemVariants}
           >
             {title}
