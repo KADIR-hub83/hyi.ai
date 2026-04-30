@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -65,6 +66,28 @@ export default function RootLayout({
     }),
   }}
 />
+<Script
+  id="seo-schema"
+  type="application/ld+json"
+  strategy="afterInteractive"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify([
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        name: "HYI AI",
+        url: "https://www.hyi.co.in",
+        logo: "https://www.hyi.co.in/favicon.ico",
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        name: "HYI AI",
+        alternateName: "HYI AI",
+        url: "https://www.hyi.co.in",
+      },
+    ]),
+  }} />
         
 
         {children}
