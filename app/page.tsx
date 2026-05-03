@@ -62,8 +62,10 @@ export default function Home() {
         <Navbar />
   
     
-           <div className="w-full flex items-center justify-center bg-[url('/Hero-map.png')] bg-no-repeat bg-cover lg:hidden">
+           <div className="w-full mt-28 flex items-center justify-center bg-[url('/Hero-map.png')] bg-no-repeat bg-contain lg:hidden">
+           <div className="p">
           <HeroSection />
+          </div>
         </div>
         <div className="w-full max-w-[1580px] flex flex-col bg-background relative isolate  mx-auto">
           <div className="flex flex-col ">
@@ -74,8 +76,8 @@ export default function Home() {
             </div>
            <div className="relative">
               <HeroUserSlider />
-              <div className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 flex items-center justify-center -z-1">
-                <div className="w-[600px] h-[600px] md:w-[950px] md:h-[450px] rounded-full bg-[radial-gradient(ellipse_at_center,_rgba(184,0,227,0.4)_0%,_transparent_70%)] blur-3xl" />
+<div className="pointer-events-none absolute -top-40 inset-x-0 flex items-center justify-center overflow-hidden">
+                  <div className="w-[600px] h-[600px] md:w-[950px] md:h-[450px] rounded-full bg-[radial-gradient(ellipse_at_center,_rgba(184,0,227,0.4)_0%,_transparent_70%)] blur-3xl" />
               </div>
             </div> 
               {/* <AetherFlowHero /> */}

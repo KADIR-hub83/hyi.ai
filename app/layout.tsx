@@ -41,7 +41,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         
       
-        <script
+        {/* <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
@@ -65,8 +65,8 @@ export default function RootLayout({
       logo: "https://www.hyi.co.in/favicon.ico",
     }),
   }}
-/>
-<Script
+/> */}
+{/* <Script
   id="seo-schema"
   type="application/ld+json"
   strategy="afterInteractive"
@@ -87,7 +87,7 @@ export default function RootLayout({
         url: "https://www.hyi.co.in",
       },
     ]),
-  }} />
+  }} /> */}
         
 
         {children}

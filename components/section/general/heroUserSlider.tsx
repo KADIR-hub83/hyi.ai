@@ -17,7 +17,7 @@ export default function HeroUserSlider() {
     },
     {
       userId: "2",
-      profilePicture: "/images5.jpeg",
+      profilePicture: "/images.jpeg",
       fullName: "Sophia Lee",
       designation: "Virtual Assistant",
       talentId: "102",
@@ -25,7 +25,7 @@ export default function HeroUserSlider() {
     },
     {
       userId: "3",
-      profilePicture: "/profile2.jpeg",
+      profilePicture: "/images.jpeg",
       fullName: "David Smith",
       designation: "Robotics Expert",
       talentId: "103",
@@ -33,7 +33,7 @@ export default function HeroUserSlider() {
     },
     {
       userId: "4",
-      profilePicture: "/images 3.jpeg",
+      profilePicture: "/images.jpeg",
       fullName: "Emma Watson",
       designation: "Data Analyst",
       talentId: "104",

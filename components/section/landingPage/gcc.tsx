@@ -43,7 +43,7 @@ export default function GCC() {
     align="center"
     className="px-5 py-2 text-base font-semibold cursor-pointer"
   >
-    <span className="flex items-center gap-2">
+    <span className="flex items-center gap-2 ">
       {GCCData.label}
 
       <ArrowRight

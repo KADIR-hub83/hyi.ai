@@ -41,17 +41,17 @@ export default function CustomUserCard({
   return hasLink ? (
     <Link
       href={`/resume/${user?.slug}`}
-      className="w-full flex items-center glass-gradient shadow-xl rounded-xl cursor-pointer gap-3.5"
+      className="flex items-center w-[240px] glass-gradient shadow-xl rounded-xl cursor-pointer gap-3.5"
     >
-      <div className="w-[52px] h-[52px] rounded-full">
-        <Image
-          src={user?.profilePicture}
-          alt="User profile image"
-          width={58}
-          height={58}
-          className="rounded-full bg-cover"
-        />
-      </div>
+<div className="w-[52px] h-[52px] rounded-full overflow-hidden relative flex-shrink-0">
+  <Image
+    src={user?.profilePicture}
+    alt="User profile image"
+    fill
+    className="object-cover"
+    sizes="52px"
+  />
+</div>
       <div className="flex flex-col gap-2">
         <div className="flex flex-col gap-0.5">
           <h2 className="text-sm font-bold text-white capitalize">

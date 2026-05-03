@@ -131,7 +131,7 @@ const resourceItems = [
   className={`
     ${
       mobileMenu
-        ? "fixed top-0 left-0 bg-black"
+        ? "fixed top-0 left-0 bg-black overflow-hidden "
         : scrolled
         ? "fixed top-0 left-0 bg-black shadow-xl backdrop-blur-md"
         : "absolute top-0 left-0 bg-transparent"
@@ -148,13 +148,13 @@ const resourceItems = [
 
       {/* ================= DESKTOP ================= */}
      
-     <div className="hidden xl:flex gap-5 items-center">
+     <div className="hidden xl:flex gap-5 items-center hyi-p">
      <div
   onMouseEnter={() => handleEnter("solutions")}
   onMouseLeave={handleLeave}
   className="relative"
 >
-  <button className="flex items-center gap-[0.5] transition font-light text-gray-200 cursor-pointer text-[15px]">
+  <button className="flex items-center gap-[0.5] transition  text-gray-200 cursor-pointer ">
     Our Solutions
 
     <svg
@@ -210,7 +210,7 @@ const resourceItems = [
           onMouseLeave={handleMouseLeave}
           className="relative"
         >
-          <button className="flex items-center gap-[0.5]  transition font-light text-gray-200 cursor-pointer text-[15px]">
+          <button className="flex items-center gap-[0.5]  transition  text-gray-200 cursor-pointer ">
             Integrate AI
             <svg
               className={`w-3 h-3 ml-1 transition-transform duration-300 ${
@@ -264,7 +264,7 @@ const resourceItems = [
           onMouseLeave={handleLeave}
           className="relative"
         >
-          <button className="flex items-center gap-[0.5]  transition font-light text-gray-200 cursor-pointer text-[15px]">
+          <button className="flex items-center gap-[0.5]  transition  text-gray-200 cursor-pointer ">
             AI Cloud
             <svg
               className={`w-3 h-3 ml-1 transition-transform duration-300 ${
@@ -310,7 +310,7 @@ const resourceItems = [
           onMouseLeave={handleLeave}
           className="relative"
         >
-          <button className="flex items-center gap-[0.5]  transition font-light text-gray-200 cursor-pointer text-[15px]">
+          <button className="flex items-center gap-[0.5]  transition  text-gray-200 cursor-pointer ">
             Robotics
             <svg
               className={`w-3 h-3 ml-1 transition-transform duration-300 ${
@@ -432,7 +432,7 @@ const resourceItems = [
   onMouseLeave={handleLeave}
   className="relative"
 >
-  <button className="flex items-center gap-[0.5] transition font-light text-gray-200 cursor-pointer text-[15px]">
+  <button className="flex items-center gap-[0.5] transition  text-gray-200 cursor-pointer ">
     Research & Development
 
     <svg
@@ -586,7 +586,7 @@ const resourceItems = [
         <div className="relative">
   <button
     onClick={() => (window.location.href = "/gcc")}
-    className="flex items-center gap-1 transition font-light text-gray-200 hover:text-purple-400 cursor-pointer text-[15px]"
+    className="flex items-center gap-1 transition  text-gray-200 hover:text-purple-400 cursor-pointer "
   >
     HYI GCC
   </button>
@@ -597,7 +597,7 @@ const resourceItems = [
   onMouseLeave={handleLeave}
   className="relative"
 >
-  <button className="flex items-center gap-[0.5] text-[15px] transition font-light text-gray-200 hover:text-purple-400 cursor-pointer">
+  <button className="flex items-center gap-[0.5]  transition  text-gray-200 hover:text-purple-400 cursor-pointer">
     Resources
 
     <svg
@@ -654,7 +654,7 @@ const resourceItems = [
 </button>
 
 <div
-  className={`fixed top-0 right-0 h-full w-[320px] bg-black p-6 z-[9999] overflow-y-auto transform ${
+  className={`fixed top-0 right-0 h-full w-[220px] bg-black p-6 z-[9999] overflow-y-auto transform text-[12px] ${
     mobileMenu ? "translate-x-0" : "translate-x-full"
   } transition duration-300`}
 >
