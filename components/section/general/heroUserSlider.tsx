@@ -17,7 +17,7 @@ export default function HeroUserSlider() {
     },
     {
       userId: "2",
-      profilePicture: "/images.jpeg",
+      profilePicture: "/women.png",
       fullName: "Sophia Lee",
       designation: "Virtual Assistant",
       talentId: "102",
@@ -25,7 +25,7 @@ export default function HeroUserSlider() {
     },
     {
       userId: "3",
-      profilePicture: "/images.jpeg",
+      profilePicture: "/men1.png",
       fullName: "David Smith",
       designation: "Robotics Expert",
       talentId: "103",
@@ -33,7 +33,7 @@ export default function HeroUserSlider() {
     },
     {
       userId: "4",
-      profilePicture: "/images.jpeg",
+      profilePicture: "/men2.png",
       fullName: "Emma Watson",
       designation: "Data Analyst",
       talentId: "104",
@@ -43,7 +43,7 @@ export default function HeroUserSlider() {
 
   return (
     <div className="flex flex-col gap-5">
-      <h1 className="text-base font-semibold bg-gradient-to-b from-white to-white/70 bg-clip-text text-transparent text-center md:text-xl lg:text-2xl">
+      <h1 className="hyi-h2 text-center">
         Verified Global Talents.
       </h1>
 

@@ -14,7 +14,7 @@ interface CustomSwiperProps {
 
 export default function CustomSwiper({
   items,
-  speed = 1,
+  speed = 0.7,
   height = "h-30",
   hasOnHoverStop = true,
   slideFromRightToLeft = true,
@@ -64,7 +64,7 @@ export default function CustomSwiper({
   useEffect(() => {
     const init = () => {
       if (track1Ref.current) {
-        trackWidth.current = track1Ref.current.offsetWidth;
+        trackWidth.current = track1Ref.current.scrollWidth;
         pos1.current = 0;
         pos2.current = trackWidth.current;
         animationFrameId.current = requestAnimationFrame(animate);

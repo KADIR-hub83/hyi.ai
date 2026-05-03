@@ -15,12 +15,12 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "HYI AI",
+    default: "HYI - Intelligent Automation for Modern Businesses",
     template: "%s | HYI AI",
   },
-  description: "HYI AI - Intelligent Automation for Modern Businesses",
+  description: "HYI  - Intelligent Automation for Modern Businesses",
   openGraph: {
-    title: "HYI AI",
+    title: "HYI ",
     description: "Intelligent Automation for Modern Businesses",
     url: "https://www.hyi.co.in",
     siteName: "HYI AI",
