@@ -77,7 +77,7 @@ export default function Home() {
            <div className="relative">
               <HeroUserSlider />
 <div className="pointer-events-none absolute -top-40 inset-x-0 flex items-center justify-center overflow-hidden">
-                  <div className="w-[600px] h-[600px] md:w-[950px] md:h-[450px] rounded-full bg-[radial-gradient(ellipse_at_center,_rgba(184,0,227,0.4)_0%,_transparent_70%)] blur-3xl" />
+                  <div className="w-[600px] h-[600px] md:w-[950px] md:h-[450px] rounded-full " />
               </div>
             </div> 
               {/* <AetherFlowHero /> */}

@@ -18,7 +18,7 @@ export default function CustomSwiper({
   height = "h-30",
   hasOnHoverStop = true,
   slideFromRightToLeft = true,
-  minWidth = "min-w-fit",
+  minWidth = "min-w-[240px]",
   gapBetweenItems = "gap-5",
 }: CustomSwiperProps) {
   const containerRef = useRef<HTMLDivElement>(null);
