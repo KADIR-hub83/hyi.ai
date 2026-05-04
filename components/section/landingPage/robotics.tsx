@@ -79,7 +79,7 @@ export default function Robotics() {
       <div className="relative z-10 max-w-[1500px] mx-auto">
         {/* Badge */}
         <div className="flex justify-center mb-6">
-           <ShimmerButton className="px-16" align="center">
+           <ShimmerButton className=" text-[18px]" align="center">
               Robotics Solution
            </ShimmerButton>
         </div>

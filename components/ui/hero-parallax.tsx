@@ -137,7 +137,7 @@ export const HeroParallax = ({ products }: HeroParallaxProps) => {
 export const Header = () => {
   return (
     <div className="relative z-10 max-w-6xl mx-auto text-center px-6">
-       <ShimmerButton className="px-16" align="center" >
+       <ShimmerButton className="" align="center" >
  AI Cloud
         </ShimmerButton> 
    

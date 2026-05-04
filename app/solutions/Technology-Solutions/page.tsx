@@ -111,10 +111,10 @@ export default function FirstSection() {
           <div className="h-[600px] w-[600px] md:h-[700px] md:w-[700px] rounded-full  blur-3xl" />
         </div>
 
-        <div className="relative z-10 flex flex-col gap-12 md:gap-16">
+        {/* <div className="relative z-10 flex flex-col gap-12 md:gap-16">
           <MVPAnimationsComponent />
           <Features />
-        </div>
+        </div> */}
       </div>
     </section>
     </>

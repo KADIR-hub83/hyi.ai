@@ -1,246 +1,115 @@
-"use client";
+"use client"
 
-import Navbar from "@/components/Navbar";
-import Link from "next/link";
+// import HeroSection from "@/components/forCompaniesPage/herosection";
+import Header from "@/components/Navbar";
+import { ShimmerButton } from "@/components/shared/customShimmerButton";
+// import HowToGetHiredCard from "@/components/talent/get-hired";
 import Amazon from "@/assets/common/FloatableIcons/amazon.png";
 import Airtable from "@/assets/common/FloatableIcons/airtable.png";
 import Calendly from "@/assets/common/FloatableIcons/calendly.png";
 import ClickUp from "@/assets/common/FloatableIcons/clickUp.png";
 import Feedback from "@/assets/common/FloatableIcons/feedback.png";
 import Google from "@/assets/common/FloatableIcons/google.png";
-import JobCategoryCard from "./job-category-card";
+import Slack from "@/assets/common/FloatableIcons/slack.png";
+import Useberry from "@/assets/common/FloatableIcons/useberry.png";
 import Footer from "@/components/Footer";
+import BrowseCategories from "@/components/talent/browse-categories";
+import WorkOptions from "@/components/talent/work-options";
+import Link from "next/link";
+import CustomFloatableIcons2 from "@/components/shared/customFloatableIcons2";
+import HowToGetHiredCard from "@/components/talent/get-hired";
+import { useRouter } from "next/navigation";
 
-export default function TalentSolutions() {
-  const browseBy = "by Job Category";
-
-  const sampleAvatars = [
-    { src: "https://i.pravatar.cc/150?img=1" },
-    { src: "https://i.pravatar.cc/150?img=2" },
-    { src: "https://i.pravatar.cc/150?img=3" },
-    { src: "https://i.pravatar.cc/150?img=4" },
+export default function GetHired() {
+    const router = useRouter();
+  const techIcons = [
+    { id: "amazon", src: Amazon, alt: "Amazon" },
+    { id: "airtable", src: Airtable, alt: "Airtable" },
+    { id: "calendly", src: Calendly, alt: "Calendly" },
+    { id: "clickUp", src: ClickUp, alt: "ClickUp" },
+    { id: "feedback", src: Feedback, alt: "Feedback" },
+    { id: "google", src: Google, alt: "Google" },
+    { id: "slack", src: Slack, alt: "Slack" },
+    { id: "useberry", src: Useberry, alt: "Useberry" },
   ];
-
-  const jobs = [
-    {
-      title: "Developer",
-      blurb: "Join our team of innovative developers!",
-      iconSrc: Amazon,
-      isFeatured: true,
-    },
-    {
-      title: "Designers",
-      blurb: "Become a part of our creative design team!",
-      iconSrc: Airtable,
-    },
-    {
-      title: "Team Leads",
-      blurb: "Lead high-performing global teams.",
-      iconSrc: Calendly,
-    },
-    {
-      title: "Software Architect",
-      blurb: "Design scalable enterprise systems.",
-      iconSrc: ClickUp,
-    },
-    {
-      title: "Project Manager",
-      blurb: "Manage products and delivery pipeline.",
-      iconSrc: Feedback,
-    },
-    {
-      title: "Analysts",
-      blurb: "Drive decisions using data insights.",
-      iconSrc: Google,
-    },
-  ];
-
-  const steps = [
-    {
-      title: "Register your account",
-      desc: "Submit your personal details to register your account.",
-    },
-    {
-      title: "Complete your profile",
-      desc: "Upload resume, skills, and experience details.",
-    },
-    {
-      title: "Pass assessments",
-      desc: "Qualify interviews and skill tests to get verified.",
-    },
-    {
-      title: "Get hired",
-      desc: "Receive offers and start working with global teams.",
-    },
-  ];
-
-  const features = [
-    {
-      title: "Talent Support",
-      desc: "Get assistance, resources, and expert guidance anytime.",
-    },
-    {
-      title: "Careers at HYI.AI",
-      desc: "Join our remote team and build global products.",
-    },
-    {
-      title: "Payout Support",
-      desc: "Get secure payments and billing support worldwide.",
-    },
-    {
-      title: "Grievance Reporting",
-      desc: "Raise issues directly with our compliance team.",
-    },
-  ];
-
   return (
-    <div className="bg-black text-white min-h-screen ">
-      <Navbar />
+    <section className="w-full flex flex-col items-center justify-center overflow-hidden px-4 sm:px-6 md:px-6 my-20">
+      <Header />
 
-      {/* HERO */}
-      <section className="max-w-7xl mx-auto px-6 pt-32 pb-20 text-start flex gap-8 justify-center items-center">
-        <div>
-     <p className="inline-flex items-center px-5 py-2 mb-4 rounded-full border border-purple-500/30 bg-gradient-to-r from-purple-500/10 via-purple-600/20 to-transparent backdrop-blur-md text-purple-400 text-sm font-semibold tracking-wide shadow-lg shadow-purple-500/10">
-  Talent Solutions
-</p>
-
-        <h1 className=" mb-2 hyi-h2 text-3xl">
-          Hire & Grow Succeed.
-        </h1>
-
-        <p className="text-gray-400 text-lg max-w-3xl mx-auto mt-6">
-          Connect with top remote developers, designers, managers, and AI
-          professionals from around the world.
-        </p>
-       </div>
-       <div>
-        <img src="/rb-sec-2.png" alt="" className="rounded-2xl" />
-       </div>
-  
-      </section>
-
-      {/* HOW TO GET HIRED */}
-      <section className="max-w-7xl mx-auto px-6 ">
-        <div
-          className="border border-gray-800 rounded-3xl p-10 bg-cover bg-center bg-no-repeat overflow-hidden"
-          style={{ backgroundImage: "url('/bg-talent.svg')", left:2, position:"relative" }}
-        >
-          <h2 className="mb-2 hyi-h2 text-center ">
-            How To Get Hired At HYI.AI
-          </h2>
-
-          <p className="text-center mt-4 hyi-p">
-            Learn strategies to land your next role with confidence.
-          </p>
-
-          <div className="grid md:grid-cols-2 gap-10 mt-14">
-            <img
-              src="/rb-sec-1.png"
-              alt="Resume Preview"
-              className="w-full h-full object-cover rounded-2xl"
+      <div className="w-full max-w-[1280px] flex flex-col items-center justify-center px-0 pt-0 pb-0 md:py-10">
+        {/* HERO */}
+        <section className="relative w-full flex justify-center px-0 md:px-8 lg:items-center ">
+          {/* floating icons overlay */}
+          <div className="pointer-events-none absolute inset-0 z-0">
+            <CustomFloatableIcons2
+              icons={techIcons}
+              overlayMode={true}
+              showContent={false}
             />
+          </div>
+   
 
-            <div className="space-y-6">
-              {steps.map((item, i) => (
-                <div key={i} className="flex gap-4">
-                  <div className="h-8 w-8 rounded-full bg-purple-600 flex items-center justify-center text-sm font-bold shrink-0">
-                    {i + 1}
-                  </div>
+          {/* hero content */}
+          <div className="relative z-5 w-full">
+            <div className="flex flex-col items-center justify-center gap-4 py-8 sm:pt-20 sm:pb-8 md:pt-24 md:pb-16 lg:pt-24 lg:pb-20 px-2">
+              <h1 className="text-white font-semibold text-lg md:text-xl lg:text-3xl text-center leading-tight">
+                Accelerate{" "}
+                <span className="text-brand-600">
+                  Your Career With HYI.AI
+                </span>
+              </h1>
 
-                  <div>
-                    <h3 className="hyi-h2 text-base">{item.title}</h3>
-                    <p className="hyi-p">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
+              <p className="text-[#D2D0DD] text-sm xs:text-base md:text-lg lg:text-lg text-center max-w-xs xs:max-w-sm sm:max-w-md md:max-w-lg lg:max-w-2xl xl:max-w-3xl px-2 xs:px-4 leading-relaxed">
+                Work remotely with global teams at leading U.S. Companies. Solve
+                cutting-edge challenges and advance AI.
+              </p>
+
+              <Link
+                href="https://va.hyi.ai/talent-signup"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-2"
+              >
+                {/* <ShimmerButton className="btn-primary">Apply Now</ShimmerButton> */}
+              </Link>
             </div>
           </div>
+        </section>
+<section className="w-full flex justify-center items-center py-10">
+  <div className="flex gap-10">
+
+    <ShimmerButton
+      onClick={() => router.push("/solutions/Talent-Solutions/support")}
+      className=" text-[14px]"
+    >
+     Talent Support
+    </ShimmerButton>
+
+    <ShimmerButton
+      onClick={() => router.push("/solutions/Talent-Solutions/resource")}
+      className="text-[14px]"
+    >
+      Talent Resource
+    </ShimmerButton>
+
+  </div>
+</section>
+
+        {/* SECTIONS */}
+        <div className="w-full mt-3 sm:mt-0 md:mt-12 px-0 sm:px-2 md:px-0">
+          <HowToGetHiredCard />
         </div>
-      </section>
 
-      {/* JOB CATEGORY */}
-      <section className="w-full mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-10">
-        <div className="text-center">
-          <h2 className="hyi-h2">Browse {browseBy}</h2>
-
-          <p className="mt-3 hyi-p max-w-3xl mx-auto">
-            Explore opportunities across development, design, management, and
-            analytics roles.
-          </p>
+        <div className="w-full mt-8 sm:mt-0 md:mt-8 px-0 sm:px-2 md:px-0">
+          <BrowseCategories />
         </div>
 
-        <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {jobs.map((job, i) => (
-            <JobCategoryCard
-              key={i}
-              title={job.title}
-              blurb={job.blurb}
-              iconSrc={job.iconSrc}
-              avatars={sampleAvatars}
-              extraCount={99}
-              isFeatured={job.isFeatured}
-              href="https://va.hyi.ai/talent-signup"
-            />
-          ))}
+        <div className="w-full px-0 sm:px-2 md:px-0">
+          <WorkOptions />
         </div>
-      </section>
+      </div>
 
-      {/* WORK MODEL */}
-      <section className="max-w-7xl mx-auto px-6 pt-10">
-        <div className="border border-gray-800 rounded-3xl p-10">
-          <h2 className="hyi-h2">
-            Join a network of elite professionals
-          </h2>
-
-          <p className="hyi-p mt-4 max-w-4xl">
-            Work on high-impact global projects with flexible hourly contracts
-            or secure full-time opportunities.
-          </p>
-
-          <div className="grid md:grid-cols-2 gap-14 mt-14">
-            <div>
-              <h3 className="hyi-h2 mb-6">Work by the Hour</h3>
-              <ul className="space-y-4 hyi-p">
-                <li>• Flexible part-time projects</li>
-                <li>• Get paid hourly or project-based</li>
-                <li>• Hassle-free contracts</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="hyi-h2 mb-6">
-                Join Us Full-Time
-              </h3>
-              <ul className="space-y-4 hyi-p">
-                <li>• Secure full-time jobs with top companies</li>
-                <li>• Direct access to hiring managers</li>
-                <li>• Competitive salaries</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SUPPORT */}
-      <section className="max-w-7xl mx-auto px-6 pt-10 pb-10">
-        <h2 className="hyi-h2 text-center">
-          Get Help With HYI.AI
-        </h2>
-
-        <div className="grid md:grid-cols-2 gap-8 mt-14">
-          {features.map((item, i) => (
-            <div
-              key={i}
-              className="rounded-3xl border border-purple-900/30 bg-[#0c0c0c] p-8"
-            >
-              <h3 className="hyi-h2">{item.title}</h3>
-              <p className="hyi-p mt-4">{item.desc}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-     <Footer/>
-    </div>
+      <Footer />
+    </section>
   );
 }
