@@ -259,7 +259,7 @@ const CareerCards = () => {
                   <div className="w-full flex justify-between items-center pb-1 gap-5">
                     <Dialog>
                       <DialogTrigger asChild>
-                        <ShimmerButton>Job Description</ShimmerButton>
+                        <ShimmerButton className="text-sm">Job Description</ShimmerButton>
                       </DialogTrigger>
                       <DialogOverlay className="fixed inset-0 bg-black/80" />
                       <DialogContent
@@ -656,7 +656,7 @@ const CareerCards = () => {
                     </Dialog>
                     <Dialog>
                       <DialogTrigger asChild>
-                        {/* <CustomButton>Apply Now</CustomButton> */}
+                        <CustomButton>Apply Now</CustomButton>
                       </DialogTrigger>
                       <DialogOverlay className="fixed inset-0 bg-black/80" />
                       <DialogContent
@@ -836,7 +836,7 @@ const CareerCards = () => {
                           )}
                           <DialogFooter>
                             <CustomButton
-                              type="submit"
+                              type="submit"                        
                               isDisabled={
                                 !email ||
                                 email === "" ||
@@ -849,9 +849,9 @@ const CareerCards = () => {
                                 phone === "" ||
                                 showMessage
                               }
-                            >
+                             >
                               Submit Details
-                            </CustomButton>
+                           </CustomButton>
                           </DialogFooter>
                         </form>
                       </DialogContent>

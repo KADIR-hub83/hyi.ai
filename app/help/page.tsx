@@ -85,8 +85,8 @@ const Page = () => {
             <h3 className="hyi-h3">Grievance & Compliance</h3>
             <p className="hyi-p">
               For any compliance-related questions or to raise a support ticket,
-              please contact our compliance team at grievance@hyi.ai and for
-              payment dispute nodal@hyi.ai.
+              please contact our compliance team at <span className="font-semibold text-brand-600">Grievance@hyi.co.in</span> and for
+              payment dispute <span className="text-brand-600 font-semibold">nodal@hyi.co.in</span>
             </p>
           </Card>
 
@@ -142,7 +142,7 @@ const Page = () => {
 
                   <div className="flex items-center gap-2 hyi-p text-nowrap">
                     <Mail size={16} />
-                    payout@hyi.ai
+                    account@hyi.co.in
                   </div>
                 </div>
               </div>
@@ -158,7 +158,7 @@ const Page = () => {
 
                   <div className="flex items-center gap-2 hyi-p text-nowrap">
                     <Mail size={16} />
-                    billing@hyi.ai
+                   account@hyi.co.in
                   </div>
                 </div>
               </div>
@@ -180,7 +180,7 @@ const Page = () => {
             <h3 className="hyi-h3">Sales Enquiries</h3>
             <p className="hyi-p">
               For sales inquiries or to connect with our sales team, email us at
-              business@hyi.ai.
+             <span className="font-semibold text-brand-600"> business@hyi.co.in</span>
             </p>
             <p className="hyi-p">
               Share your requirements, and we&apos;ll get in touch.
@@ -200,7 +200,7 @@ const Page = () => {
             <h3 className="hyi-h3">Work at HYI.AI</h3>
             <p className="hyi-p">
               Are you interested in joining our remote team? Contact us at
-              recruitment@hyi.ai.
+             <span className="font-semibold text-brand-600"> recruitment@hyi.co.in</span>
             </p>
             <p className="hyi-p">
               We welcome talented individuals who are passionate about

@@ -128,13 +128,47 @@ export default function Footer() {
             © {new Date().getFullYear()} HYI.AI All rights reserved.
           </p>
 
-          <div className="flex items-center gap-5 text-2xl text-gray-300">
-            <FaXTwitter className="hover:text-white cursor-pointer" />
-            <FaYoutube className="hover:text-white cursor-pointer" />
-            <FaInstagram className="hover:text-white cursor-pointer" />
-            <FaFacebookF className="hover:text-white cursor-pointer" />
-            <FaLinkedinIn className="hover:text-white cursor-pointer" />
-          </div>
+     <div className="flex items-center gap-5 text-2xl text-gray-300">
+  <a
+    href="https://x.com/HyiAiOfficial"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <FaXTwitter className="hover:text-white cursor-pointer" />
+  </a>
+
+  <a
+    href="https://www.youtube.com/@HYI.AI_Official"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <FaYoutube className="hover:text-white cursor-pointer" />
+  </a>
+
+  <a
+    href="https://www.instagram.com/hyi_ai/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <FaInstagram className="hover:text-white cursor-pointer" />
+  </a>
+
+  <a
+    href="https://www.facebook.com/profile.php?id=61580823845169"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <FaFacebookF className="hover:text-white cursor-pointer" />
+  </a>
+
+  <a
+    href="https://in.linkedin.com/company/hyiai"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <FaLinkedinIn className="hover:text-white cursor-pointer" />
+  </a>
+</div>
         </div>
       </div>
     </footer>

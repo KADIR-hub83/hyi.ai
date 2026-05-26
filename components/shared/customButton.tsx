@@ -28,7 +28,7 @@ export default function CustomButton({
     <button
       type={type}
       disabled={isDisabled}
-      className={`text-sm ${
+      className={`text-sm w-[130px] ${
         heroButton ? "btn-hero" : "btn-primary"
       } ${otherCSSProperty} ${
         isDisabled ? "cursor-not-allowed bg-text-400" : "cursor-pointer"

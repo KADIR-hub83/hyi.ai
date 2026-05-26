@@ -33,7 +33,7 @@ export default function GetHired() {
     { id: "useberry", src: Useberry, alt: "Useberry" },
   ];
   return (
-    <section className="w-full flex flex-col items-center justify-center overflow-hidden px-4 sm:px-6 md:px-6 my-20">
+    <section className="w-full flex flex-col items-center justify-center overflow-hidden px-4 sm:px-6 md:px-6 mt-20">
       <Header />
 
       <div className="w-full max-w-[1280px] flex flex-col items-center justify-center px-0 pt-0 pb-0 md:py-10">

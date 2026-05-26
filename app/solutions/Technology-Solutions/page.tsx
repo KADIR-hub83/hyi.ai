@@ -19,16 +19,19 @@ export default function FirstSection() {
 <section className="relative min-h-screen overflow-hidden bg-black text-white px-20">
 
   {/* Background Glow */}
-  <div className="absolute inset-0 -z-10">
-    <div className="absolute top-20 left-1/2 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-purple-600/20 blur-[140px]" />
-    <div className="absolute bottom-10 right-10 h-[350px] w-[350px] rounded-full bg-blue-500/10 blur-[120px]" />
-  </div>
+<div className="absolute inset-0 z-10">
+  <div className="absolute top-0 left-3 h-[600px] w-[600px] 
+    rounded-full bg-purple-600/30 blur-[160px]" />
+
+  <div className="absolute bottom-0 left-0 h-[500px] w-[500px] 
+    rounded-full bg-pink-500/20 blur-[140px]" />
+</div>
 
   {/* Main Content */}
   <div className="mx-auto flex min-h-screen max-w-[1400px] flex-col items-center justify-center px-6 py-20 lg:flex-row lg:gap-16">
 
     {/* Left Content */}
-    <div className="w-full lg:w-1/2 text-center lg:text-left">
+    <div className="w-full lg:w-1/2 text-center lg:text-left z-90">
       <p className="inline-flex items-center gap-2 rounded-full border border-purple-500/30 bg-purple-500/10 px-5 py-2 text-sm font-medium text-purple-400 backdrop-blur-md">
         Future Ready Solutions
       </p>
@@ -65,7 +68,7 @@ export default function FirstSection() {
     </div>
 
     {/* Right Content */}
-    <div className="mt-16 flex w-full justify-center lg:mt-0 lg:w-1/2">
+    {/* <div className="mt-16 flex w-full justify-center lg:mt-0 lg:w-1/2">
       <div className="relative h-[520px] w-full max-w-[560px] rounded-[32px] border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
 
         <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-purple-600/20 to-transparent p-6">
@@ -101,7 +104,16 @@ export default function FirstSection() {
         </div>
 
       </div>
-    </div>
+    </div> */}
+
+<div
+  className="flex  cursor-default lg:w-1/2
+             min-h-[300px] w-full
+             bg-[url('/card-bg-01.webp')] bg-no-repeat bg-[length:100%_100%]"
+>
+  <h1 className="hyi-h2 text-white text-start px-20 py-20">hello</h1>
+</div>
+
 
   </div>
 </section>
