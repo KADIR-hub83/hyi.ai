@@ -111,7 +111,7 @@ export default function FirstSection() {
              min-h-[300px] w-full
              bg-[url('/card-bg-01.webp')] bg-no-repeat bg-[length:100%_100%]"
 >
-  <h1 className="hyi-h2 text-white text-start px-20 py-20">hello</h1>
+  <h1 className="hyi-h2 text-white text-start px-20 py-20"></h1>
 </div>
 
 
