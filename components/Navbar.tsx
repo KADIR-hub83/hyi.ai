@@ -648,19 +648,19 @@ const resourceItems = [
    {/* ================= MOBILE ================= */}
 <button
   onClick={() => setMobileMenu(!mobileMenu)}
-  className="xl:hidden text-3xl"
+  className="xl:hidden text-[26px]"
 >
   ☰
 </button>
 
 <div
-  className={`fixed top-0 right-0 h-full w-[220px] bg-black p-6 z-[9999] overflow-y-auto transform text-[12px] ${
+  className={`fixed top-0 right-0 h-full w-[230px] bg-black p-3 z-[9999] overflow-y-auto transform hyi-p ${
     mobileMenu ? "translate-x-0" : "translate-x-full"
   } transition duration-300`}
 >
   <button
     onClick={() => setMobileMenu(false)}
-    className="text-2xl mb-6"
+    className="text-[20px] mb-3"
   >
     ✕
   </button>
