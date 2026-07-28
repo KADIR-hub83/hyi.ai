@@ -137,7 +137,7 @@ const Page = () => {
                   <p className="hyi-p text-sm mb-1">Talent</p>
                   <div className="flex items-center gap-2 hyi-p text-nowrap">
                     <Phone size={16} />
-                    +91 9741968220
+                    +91 9008308909
                   </div>
 
                   <div className="flex items-center gap-2 hyi-p text-nowrap">
@@ -153,7 +153,7 @@ const Page = () => {
                   <p className="hyi-p text-sm mb-1">Company</p>
                   <div className="flex items-center gap-2 hyi-p text-nowrap">
                     <Phone size={16} />
-                    +91 7349129333
+                    +91 9008308909
                   </div>
 
                   <div className="flex items-center gap-2 hyi-p text-nowrap">

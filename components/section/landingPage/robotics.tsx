@@ -70,7 +70,7 @@ export default function Robotics() {
 ];
 
   return (
-    <section className="relative overflow-hidden bg-black text-white py-16 px-6 xl:px-16">
+    <section className="relative overflow-hidden bg-black text-white py-10 px-6 xl:px-16">
       {/* Background Glow */}
   <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,#bd1cc6_0%,transparent_35%),radial-gradient(circle_at_bottom_right,#bd1cc6_0%,transparent_35%)] opacity-60" />
 

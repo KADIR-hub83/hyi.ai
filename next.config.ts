@@ -1,13 +1,20 @@
 import type { NextConfig } from "next";
 
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-images: {
-  domains: ["images.unsplash.com"],
+/** @type {NextConfig} */
+const nextConfig: NextConfig = {
+  images: {
     remotePatterns: [
       {
         protocol: "https",
+        hostname: "images.unsplash.com",
+      },
+      {
+        protocol: "https",
         hostname: "me7aitdbxq.ufs.sh",
+      },
+      {
+        protocol: "https",
+        hostname: "flagcdn.com",
       },
     ],
   },
